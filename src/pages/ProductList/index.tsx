@@ -1,10 +1,28 @@
 import PageLayout from "../../shared/layouts/PageLayout";
+import { useEffect, useState } from 'react';
+import MainProductCard from "../../features/mainPage/components/MainProductCard";
+import type { MainProductType } from "../../types/mainProductType";
+
 
 const ProductList = () =>{
+  const [products, setProducts] = useState<MainProductType[]>([]);
+
+    useEffect(() => {
+      fetch('http://127.0.0.1:8000/api/food/foods/')
+          .then(res => res.json())
+          .then(data => setProducts(data));
+  }, []);
+
   return (
-    <PageLayout name={'Product List'} href={'/products'}>
-      <h1>Product List</h1>
-      <p>This is the Product List page.</p>
+    <PageLayout name="Product List" href="/products">
+        <div className="products-grid">
+            {products.map(product => (
+                <MainProductCard
+                  key={product.id}
+                  {...product}
+                />
+            ))}
+        </div>
     </PageLayout>
   )
 };
