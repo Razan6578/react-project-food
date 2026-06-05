@@ -1,0 +1,86 @@
+.faq {
+  width: 100%;
+  padding: 60px 0;
+  background: #f5f5f5;
+}
+
+.faq__container {
+  width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.faq__image {
+  flex: 1;
+}
+
+.faq__image img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.faq__content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq__item {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.faq__item summary {
+  list-style: none;
+  cursor: pointer;
+
+  padding: 18px 20px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary::after {
+  content: "›";
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.faq__item[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.faq__item p {
+  padding: 0 20px 20px;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .faq__container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq__container {
+    flex-direction: column;
+  }
+}

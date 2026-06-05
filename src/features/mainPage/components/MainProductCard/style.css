@@ -1,0 +1,39 @@
+.prices{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.new-price{
+    color: #ff5a36;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.old-price{
+    color: gray;
+    text-decoration: line-through;
+}
+
+.product-card{
+    width: 260px;
+    padding: 14px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.product-image{
+    background: #f7f4f4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.product-image img{
+    width: 180px;
+    height: auto;
+}
+

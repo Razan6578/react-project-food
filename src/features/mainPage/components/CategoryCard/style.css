@@ -1,0 +1,21 @@
+.category-card {
+  width: 150px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}

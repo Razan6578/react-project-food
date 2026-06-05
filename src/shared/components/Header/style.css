@@ -1,0 +1,116 @@
+.first-line {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav {
+  display: flex;
+  gap: 50px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold
+}
+
+.phone {
+  font-size: 14px;
+  color: #222;
+}
+
+.second-line {
+  background-color: aliceblue;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background: #fff;
+}
+
+.main-header-content {
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color:#222;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h2 {
+  font-size: 28px;
+}
+
+.logo p {
+  font-size: 12px;
+  color: black;
+}
+
+.search-block {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.search-block input {
+  flex: 1;
+  height: 50px;
+  border: none;
+  padding: 0 15px;
+  outline: none;
+}
+
+.search-block select {
+  height: 50px;
+  border: none;
+  border-left: 1px solid #ddd;
+  padding: 0 10px;
+  outline: none;
+}
+
+.search-block button {
+  width: 60px;
+  height: 50px;
+
+  border: none;
+  background: #ff6b4a;
+  color: black;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.actions span {
+  cursor: pointer;
+}
