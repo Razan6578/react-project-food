@@ -5,12 +5,12 @@ const MainProductCard = (props:MainProductType) => {
     return (
         <div className='product-card'>
             <div className='product-image'>
-                <img src={props.image} alt={props.name}></img>    
+                <img src={props.mainImage} alt={props.name}></img>    
             </div>
             <div>
 
             </div>
-            <p>{props.categoryName}</p>
+            <p>{props.brandName}</p>
             <div>
                 <p>{props.rating}/5</p>
             </div>

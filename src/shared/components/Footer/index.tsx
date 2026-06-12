@@ -1,5 +1,8 @@
 import FooterListPart from '../FooterListPart';
 import './style.css'
+import LogoBlock from '../../../features/mainPage/components/LogoBlock';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import headerLogo from '../../../assets/headerLogo.png';
 
 const Footer = () => {
 
@@ -26,17 +29,7 @@ const Footer = () => {
       <div className="container footer-content">
 
         <div className="footer-col">
-          <div className="logo">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
-              alt="logo"
-            />
-
-            <div>
-              <h2>Foodzy</h2>
-              <p>A Treasure of Tastes</p>
-            </div>
-          </div>
+          <LogoBlock img={headerLogo} title='Foodzy' text='A Treasure of Tastes' />
 
           <p className="footer-text">
             Foodtrove is the biggest market of grocery products.
@@ -46,7 +39,7 @@ const Footer = () => {
           <div className="contact">
             <p>📍 51 Green St.Huntington ohio beach ontario, NY 11746 KY 4783, USA</p>
             <p>✉️ example@email.com</p>
-            <p>📞 +91 123 4567890</p>
+            <p><LocalPhoneOutlinedIcon style={{margin:"-9px 4px", color:"red"}} /><a className='hover-link' href='tel:+911234567890'> +91 123 4567890 </a></p>
           </div>
         </div>
 

@@ -1,5 +1,7 @@
 import PageLayout from "../../shared/layouts/PageLayout";
 import { useNavigate } from 'react-router-dom';
+import './style.css'
+import regLogo from '../../assets/regLogo.png';
 
 const Login = () =>{
 
@@ -66,20 +68,26 @@ const Login = () =>{
   
   return (
     <PageLayout name={'Login'} href={'/login'}>
-      <div style={{ margin: '150px', textAlign: 'center' }}>
-        <h1>Login</h1>
+      <div className="log-cont">
+        <div className="log-logo">
+          <img src={regLogo} alt="FoodTrove Logo"></img>
+          <h2>FoodTrove</h2>
+        </div>
       
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '400px' }}>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" pattern={emailRegex.toString()}  required />
+            <input id="email" className="form-block" type="email" name="email" pattern={emailRegex.toString()} placeholder="Your email.."  required />
           </div>
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required />
+            <input id="password" className="form-block" type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="Your password.." required />
           </div>
 
-          <button type="submit">Login</button>
+          <div className="buttons">
+              <button type="submit">Login</button>
+              <a href="/registration">Signup?</a>
+          </div>
         </form>
       </div>
     </PageLayout>

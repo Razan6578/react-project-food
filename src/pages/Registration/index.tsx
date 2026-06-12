@@ -1,5 +1,7 @@
 import PageLayout from "../../shared/layouts/PageLayout";
 import { useNavigate } from 'react-router-dom';
+import './style.css'
+import regLogo from '../../assets/regLogo.png';
 
 const Registration = () =>{
   const navigate = useNavigate();
@@ -82,28 +84,35 @@ const Registration = () =>{
 
   return (
     <PageLayout name={'Registration'} href={'/registration'}>
-      <div style={{ margin: '150px', textAlign: 'center' }}>
-        <h1>Registration</h1>
-      
+      <div className="reg-cont">      
+        <div className="reg-logo">
+          <img src={regLogo} alt="FoodTrove Logo"></img>
+          <h2>FoodTrove</h2>
+        </div>
+
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '400px' }}>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" pattern={emailRegex.toString()}  required />
+            <input id="email" className="form-block" type="email" name="email" pattern={emailRegex.toString()} placeholder="Your email.."  required />
           </div>
           <div>
             <label htmlFor="phone">Phone Number:</label>
-            <input type="tel" name="phone" pattern="^\+?[1-9]\d{1,13}$" required />
+            <input id="phone" className="form-block" type="tel" name="phone" pattern="^\+?[1-9]\d{1,13}$" placeholder="Your phone.." required />
           </div>
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required />
+            <input id="password" className="form-block" type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="Your password.." required />
           </div>
           <div>
             <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" required />
+            <input id="confirmPassword" className="form-block" type="password" name="confirmPassword" placeholder="Сonfirm your password.." required />
           </div>
 
-          <button type="submit">Register</button>
+          <div className="buttons">
+              <button type="submit">Register</button>
+              <a href="/login">Have an account?</a>
+          </div>
+
         </form>
       </div>
     </PageLayout>

@@ -1,30 +1,29 @@
 import './style.css'
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import LogoBlock from '../../../features/mainPage/components/LogoBlock';
+import headerLogo from '../../../assets/headerLogo.png';
 
 const Header = () =>{
   return (
     <>
       <div className="first-line">
           <nav className='nav'>
-              <a href="/">Home</a>
-              <a href="#">Category</a>
-              <a href="/products">Products</a>
-              <a href="#">Pages</a>
-              <a href="/blogs">Blog</a>
-              <a href="#">Elements</a>
+              <a className='hover-link' href="/">Home</a>
+              <a className='hover-link' href="#">Category</a>
+              <a className='hover-link' href="/products">Products</a>
+              <a className='hover-link' href="#">Pages</a>
+              <a className='hover-link' href="/blogs">Blog</a>
+              <a className='hover-link' href="#">Elements</a>
           </nav>
-          <div className="phone">
-            +123 (456) (7890)
-          </div>
+          <p className="phone"><LocalPhoneOutlinedIcon style={{margin:"-9px 4px"}}/><a className='hover-link' href='tel:+1234567890'>+123 (456) (7890)</a></p>
       </div>
       <div className="main-header">
         <div className="container main-header-content">
           
-          <div className="logo">
-            <div>
-            <h2 style={{color:'black'}}>Foodzy</h2>
-              <p>A Treasure of Tastes</p>
-            </div>
-          </div>
+          <LogoBlock img={headerLogo} title='Foodzy' text='A Treasure of Tastes' />
 
           <div className="search-block">
             <input
@@ -40,9 +39,9 @@ const Header = () =>{
           </div>
 
           <div className="actions">
-            <a href='/registration'><span style={{color:'black'}}>Account</span></a>
-            <span style={{color:'black'}}>Wishlist</span>
-            <span style={{color:'black'}}>Cart</span>
+            <PersonOutlinedIcon /><a className='hover-link' href='/registration'><span style={{color:'black', margin:"0 -15px", padding:"0px 15px 0px 0px"}}>Account</span></a>
+            <FavoriteBorderOutlinedIcon /><span className='hover-link' style={{color:'black', margin:"0 -15px", padding:"0px 15px 0px 0px"}}>Wishlist</span>
+            <ShoppingCartOutlinedIcon /><span className='hover-link' style={{color:'black', margin:"0 -15px", padding:"0px 15px 0px 0px"}}>Cart</span>
           </div>
         </div>
       </div>
