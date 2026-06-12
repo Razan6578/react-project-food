@@ -2,7 +2,7 @@ import PageLayout from "../../shared/layouts/PageLayout";
 import { useEffect, useState } from 'react';
 import MainProductCard from "../../features/mainPage/components/MainProductCard";
 import type { MainProductType } from "../../types/mainProductType";
-
+import "./style.css";
 
 const ProductList = () =>{
   const [products, setProducts] = useState<MainProductType[]>([]);
