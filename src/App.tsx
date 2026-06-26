@@ -1,23 +1,33 @@
-import './App.css'
-import CategoryCard from './features/mainPage/components/CategoryCard'
-import BlogCard from './features/mainPage/components/BlogCard'
-import PromoBlock from './features/mainPage/components/PromoBlock'
-import BasePageLayout from './shared/layouts/BasePageLayout'
-import MainProductCard from './features/mainPage/components/MainProductCard'
+import './App.css';
+import BasePageLayout from './shared/layouts/BasePageLayout';
+import homeBg from './assets/home-bg.png';
+import peperHome from './assets/peperHomePage.png';
+import homeText from './assets/homePageText.png';
+import chicken from './assets/Chicken.png';
 
 function App() {
-  
-
   return (
     <>
       <BasePageLayout>
-        <CategoryCard id={0} name={'FFFFF'} image={'https://placehold.net/400x400.png'} count={2} />
-        <BlogCard id={0} title={'FFFFF'} image={'https://placehold.net/400x400.png'} text={'FFFFF'} />
-        <PromoBlock />
-        <MainProductCard id={0} categoryId={0} categoryName={'product'} name={'apple'} image={'https://placehold.net/400x400.png'} rating={2} originalPrice={70} discountPrice={10}></MainProductCard>
+        <div className="image-wrapper">
+          <img src={homeBg} alt="homeBg" className="bg" />
+          <img src={peperHome} alt="peperHome" className="overlay" />
+          <img
+            src={homeText}
+            alt="homeText"
+            style={{ width: '938px', height: '602px' }}
+            className="overlay"
+          />
+          <img
+            src={chicken}
+            alt="chicken"
+            style={{ width: '938px', height: '602px', margin: '0px 0px 0px 730px' }}
+            className="overlay"
+          />
+        </div>
       </BasePageLayout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

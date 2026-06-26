@@ -1,49 +1,58 @@
-import { createBrowserRouter } from "react-router";
-import App from "../../App";
-import AboutUs from "../../pages/AboutUs";
-import ProductList from "../../pages/ProductList";
-import Blog from "../../pages/Blog";
-import Blogs from "../../pages/Blogs";
-import Login from "../../pages/Login";
-import Product from "../../pages/Product";
-import Registration from "../../pages/Registration";
-import FAQ from "../../pages/FAQ";
+import { createBrowserRouter } from 'react-router';
+import App from '../../App';
+import AboutUs from '../../pages/AboutUs';
+import ProductList from '../../pages/ProductList';
+import Blog from '../../pages/Blog';
+import Blogs from '../../pages/Blogs';
+import Login from '../../pages/Login';
+import Product from '../../pages/Product';
+import Registration from '../../pages/Registration';
+import FAQ from '../../pages/FAQ';
+import User from '../../pages/User';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     Component: App,
   },
   {
-    path: "/about",
+    path: '/about',
     Component: AboutUs,
   },
   {
-    path: "/products",
+    path: '/products',
     Component: ProductList,
   },
   {
-    path: "/blog",
+    path: '/blog',
     Component: Blog,
   },
   {
-    path: "/blogs",
+    path: '/blogs',
     Component: Blogs,
   },
   {
-    path: "/login",
+    path: '/login',
     Component: Login,
   },
   {
-    path: "/product",
+    path: '/product',
     Component: Product,
   },
   {
-    path: "/registration",
+    path: '/registration',
     Component: Registration,
   },
   {
-    path: "/faq",
+    path: '/faq',
     Component: FAQ,
+  },
+  {
+    path: '/user',
+    Component: User,
+  },
+  {
+    path: '/product/:id',
+    Component: Product,
   },
 ]);
